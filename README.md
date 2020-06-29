@@ -58,6 +58,7 @@ iwonhwaui-MacBook-Pro:~ wanna$ ls -a
 .emulator_console_auth_token	Pictures
 .flutter			Public
 .flutter_tool_state		VirtualBox VMs
+
 파일 앞의 .은 숨겨진 파일
 ```
 
@@ -67,18 +68,18 @@ iwonhwaui-MacBook-Pro:~ wanna$ pwd
 /Users/wanna
 ```
 
-*mkdir : mkdir 새로 생성할 디렉토리이름  
+*mkdir : mkdir 새로 생성할 디렉토리이름    
   -mkdir -p : 필요하면 부모 디렉토리 생성히고 자식 디렉토리 생성
 ```
 iwonhwaui-MacBook-Pro:~ wanna$ mkdir hello_linux
 iwonhwaui-MacBook-Pro:~ wanna$ mkdir -p dir1/dir2/dir3/dir4
 ```
 
-*cd : cd 이동할 디렉토리의 경로명
-  -상대경로 : 현재 디렉토리의 위치를 기준으로 다른 디렉토리의 위치를 표현하는 것으로 ..은 부모 디렉토리를 의미. 'cd ..'은 현재 디렉토리의 부모 디렉토리로 이동하는 명령이 된다. 참고로 현재 디렉토리는 '.' 다. 
-  -절대경로 : 최상위 디렉토리를 기준으로 경로를 표현하는 것을 의미. 최상위 디렉토리는 루트(root) 디렉토리라고 하고 '/' 입니다. 'cd /'는 최상위 디렉토리로 이동한다는 뜻입니다. 'cd /home/wanna'은 현재 디렉토리가 무엇이건 언제나 '/home/wanna'을 의미하는데 이런 식의 경로 표현을 절대경로라고 한다. 
+*cd : cd 이동할 디렉토리의 경로명  
+  -상대경로 : 현재 디렉토리의 위치를 기준으로 다른 디렉토리의 위치를 표현하는 것으로 ..은 부모 디렉토리를 의미. 'cd ..'은 현재 디렉토리의 부모 디렉토리로 이동하는 명령이 된다. 참고로 현재 디렉토리는 '.' 다.   
+  -절대경로 : 최상위 디렉토리를 기준으로 경로를 표현하는 것을 의미. 최상위 디렉토리는 루트(root) 디렉토리라고 하고 '/' 입니다. 'cd /'는 최상위 디렉토리로 이동한다는 뜻입니다. 'cd /home/wanna'은 현재 디렉토리가 무엇이건 언제나 '/home/wanna'을 의미하는데 이런 식의 경로 표현을 절대경로라고 한다.   
   
-*rm : 파일이나 디렉토리 삭제 명령어. 디렉토리 삭제시 r 옵션을 주어야한다.
+*rm : 파일이나 디렉토리 삭제 명령어. 디렉토리 삭제시 r 옵션을 주어야한다.  
 ```
 iwonhwaui-MacBook-Pro:wanna wanna$ rm hello_linux/
 rm: hello_linux/: is a directory
@@ -108,11 +109,11 @@ iwonhwaui-MacBook-Pro:wanna wanna$ rm -r hello_linux/
 ```
 iwonhwaui-MacBook-Pro:~ wanna$ cp cp.txt hello_linux/cp.txt
 ```
-*mv : 파일 이동 명령어. mv 파일 위치 및 파일 이름 (한칸 띄고) 파일 목적지 파일 위치 및 파일 이름
+*mv : 파일 및 디렉토리 이동 명령어. mv 파일 위치 및 파일 이름 (한칸 띄고) 파일 목적지 파일 위치 및 파일 이름
 ```
 iwonhwaui-MacBook-Pro:~ wanna$ mv mv.txt hello_linux/mv.txt
 
-
+파일명 변경시에도 사용
 iwonhwaui-MacBook-Pro:hello_linux wanna$ mv mv.txt rename.txt
 iwonhwaui-MacBook-Pro:hello_linux wanna$ ls -l
 total 0
