@@ -11,7 +11,7 @@
 *pwd : 현재 위치하고 있는 디렉토리를 알려주는 명령어  
 *mkdir : mkdir 새로 생성할 디렉토리이름  
 
-```
+```linux
 iwonhwaui-MacBook-Pro:~ wanna$ ls
 AndroidStudioProjects	Downloads		Pictures
 Applications		Library			Public
