@@ -7,13 +7,15 @@
 ````````````
 
 ## 명령어
-*ls : 현재 디렉토리의 파일 목록을 출력하는 명령어. ls -l은 자세히 보기
-*pwd : 현재 위치하고 있는 디렉토리를 알려주는 명령어
-*mkdir : mkdir 새로 생성할 디렉토리이름
+*ls : 현재 디렉토리의 파일 목록을 출력하는 명령어. ls -l은 자세히 보기  
+*pwd : 현재 위치하고 있는 디렉토리를 알려주는 명령어  
+*mkdir : mkdir 새로 생성할 디렉토리이름  
 
-\`iwonhwaui-MacBook-Pro:~ wanna$ ls
+```
+iwonhwaui-MacBook-Pro:~ wanna$ ls
 AndroidStudioProjects	Downloads		Pictures
 Applications		Library			Public
 Desktop			Movies			VirtualBox VMs
 Documents		Music
-iwonhwaui-MacBook-Pro:~ wanna$ \`
+iwonhwaui-MacBook-Pro:~ wanna$
+```
