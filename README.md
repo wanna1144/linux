@@ -1,15 +1,15 @@
 # linux
 
-> 터미널에서 리눅스를 제어하기 위해서 중요한 두가지
->> 1. 명령어를 통한 제어
->> 2. 명령은 현재 디렉토리에 내려짐 (pwd 수시 확인)
+터미널에서 리눅스를 제어하기 위해서 중요한 두가지  
+1. 명령어를 통한 제어  
+2. 명령은 현재 디렉토리에 내려짐 (pwd 수시 확인)  
 
 
 ## 명령어
 *ls : 현재 디렉토리의 파일 목록을 출력하는 명령어.   
-&nbsp;-ls -l : 자세히 보기   
-  -ls -a : 숨겨진 파일도 보여줌  
-  -ls -al : 숨겨진 파일과 자세히 보기  
+>-ls -l : 자세히 보기   
+>-ls -a : 숨겨진 파일도 보여줌  
+>-ls -al : 숨겨진 파일과 자세히 보기  
 ```
 iwonhwaui-MacBook-Pro:~ wanna$ ls
 AndroidStudioProjects	Downloads		Pictures
@@ -69,7 +69,7 @@ iwonhwaui-MacBook-Pro:~ wanna$ pwd
 ```
 
 *mkdir : mkdir 새로 생성할 디렉토리이름    
-  -mkdir -p : 필요하면 부모 디렉토리 생성히고 자식 디렉토리 생성
+>mkdir -p : 필요하면 부모 디렉토리 생성히고 자식 디렉토리 생성
 ```
 iwonhwaui-MacBook-Pro:~ wanna$ mkdir hello_linux
 iwonhwaui-MacBook-Pro:~ wanna$ mkdir -p dir1/dir2/dir3/dir4
