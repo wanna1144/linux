@@ -119,3 +119,129 @@ iwonhwaui-MacBook-Pro:hello_linux wanna$ ls -l
 total 0
 -rw-r--r--  1 wanna  staff  0  6 30 01:07 rename.txt
 ```
+
+*sudo : 임시 슈퍼 유저의 권한으로 활동하는 명령어.
+
+*nano : 파일 편집 명령어.
+>^O : 파일 저장
+>^X : 편집 종료
+>^K : 잘라내기 _nano는 복사 기능이 없어서 ^K와 ^U로 사용해야함_
+>^U : 붙여넣기
+>(mac) esc+6 : mask set _선택하려는 영역 뒤까지 선택하기_
+>^W : 검색 _다음 검색어를 보려면 다시 ^W + enter_
+
+*wget : url을 통해 파일 다운 _맥은 brew install wget 후 사용_
+>wget -O (파일 명) (다운로드 링크) : 적은 파일명으로 저장됨
+```
+iwonhwaui-MacBook-Pro:~ wanna$ wget http://wanna.dothome.co.kr/img/pdf/syeki.pdf
+--2020-06-30 23:13:18--  http://wanna.dothome.co.kr/img/pdf/syeki.pdf
+Resolving wanna.dothome.co.kr (wanna.dothome.co.kr)... 112.175.184.9
+Connecting to wanna.dothome.co.kr (wanna.dothome.co.kr)|112.175.184.9|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 8080675 (7.7M) [application/pdf]
+Saving to: ‘syeki.pdf’
+
+syeki.pdf           100%[===================>]   7.71M  11.7MB/s    in 0.7s    
+
+2020-06-30 23:13:19 (11.7 MB/s) - ‘syeki.pdf’ saved [8080675/8080675]
+
+iwonhwaui-MacBook-Pro:~ wanna$ ls -l
+total 15784
+drwxr-xr-x   4 wanna  staff      128  5 22 15:39 AndroidStudioProjects
+drwx------@  4 wanna  staff      128 11 18  2019 Applications
+drwx------@ 16 wanna  staff      512  6 29 23:45 Desktop
+drwx------@  7 wanna  staff      224  6 30 22:43 Documents
+drwx------+ 20 wanna  staff      640  6 29 23:05 Downloads
+drwx------@ 81 wanna  staff     2592  6 29 16:10 Library
+drwx------+  4 wanna  staff      128 12 26  2019 Movies
+drwx------+  5 wanna  staff      160 12 26  2019 Music
+drwx------+  4 wanna  staff      128  1  8  2019 Pictures
+drwxr-xr-x+  4 wanna  staff      128 10 14  2018 Public
+drwxr-xr-x   4 wanna  staff      128  6 29 22:17 VirtualBox VMs
+-rw-r--r--   1 wanna  staff  8080675  5 22 16:03 syeki.pdf  
+
+iwonhwaui-MacBook-Pro:~ wanna$ wget -O pdfpdf.pdf  http://wanna.dothome.co.kr/img/pdf/syeki.pdf
+--2020-06-30 23:15:43--  http://wanna.dothome.co.kr/img/pdf/syeki.pdf
+Resolving wanna.dothome.co.kr (wanna.dothome.co.kr)... 112.175.184.9
+Connecting to wanna.dothome.co.kr (wanna.dothome.co.kr)|112.175.184.9|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 8080675 (7.7M) [application/pdf]
+Saving to: ‘pdfpdf.pdf’
+
+pdfpdf.pdf          100%[===================>]   7.71M  29.1MB/s    in 0.3s    
+
+2020-06-30 23:15:44 (29.1 MB/s) - ‘pdfpdf.pdf’ saved [8080675/8080675]
+
+iwonhwaui-MacBook-Pro:~ wanna$ ls -l
+total 31568
+drwxr-xr-x   4 wanna  staff      128  5 22 15:39 AndroidStudioProjects
+drwx------@  4 wanna  staff      128 11 18  2019 Applications
+drwx------@ 16 wanna  staff      512  6 29 23:45 Desktop
+drwx------@  7 wanna  staff      224  6 30 23:15 Documents
+drwx------+ 20 wanna  staff      640  6 29 23:05 Downloads
+drwx------@ 81 wanna  staff     2592  6 29 16:10 Library
+drwx------+  4 wanna  staff      128 12 26  2019 Movies
+drwx------+  5 wanna  staff      160 12 26  2019 Music
+drwx------+  4 wanna  staff      128  1  8  2019 Pictures
+drwxr-xr-x+  4 wanna  staff      128 10 14  2018 Public
+drwxr-xr-x   4 wanna  staff      128  6 29 22:17 VirtualBox VMs
+-rw-r--r--   1 wanna  staff  8080675  5 22 16:03 hello.pdf
+-rw-r--r--   1 wanna  staff  8080675  5 22 16:03 pdfpdf.pdf
+```
+
+*cat : cat (파일명) 을 하면 화면에 내용 출력
+```
+iwonhwaui-MacBook-Pro:why wanna$ cat hello.html
+<html>
+	<body>
+		hello
+	</body>
+</html>
+```
+
+*grep (찾을 단어) (파일명) : 찾을 단어가 포함된 행을 보여주는 명령어.
+
+*pipe(|) : 파이프 앞의 결과 값을 가지고 프로그램을 연결하는 명령어.
+```
+iwonhwaui-MacBook-Pro:why wanna$ man ls | grep sort
+     displayed first; directory and non-directory operands are sorted sepa-
+     -c      Use time when file status was last changed for sorting (-t) or
+     -f      Output is not sorted.  This option turns on the -a option.
+     -r      Reverse the order of the sort to get reverse lexicographical
+             bined with sort by size
+     -t      Sort by time modified (most recently modified first) before sort-
+             for sorting (-t) or long printing (-l).
+     -U      Use time of file creation, instead of last modification for sort-
+             with entries sorted across, rather than down, the columns.
+     The following is how to do an ls listing sorted by increasing size
+     chflags(1), chmod(1), sort(1), xterm(1), compat(5), termcap(5),
+     
+     ls의 도움말에서 sort가 포함된 행을 보여줌
+```
+
+*output(>) : 앞의 프로그램을 실행한 결과값을 화면에 출력하는 대신에 뒤의 프로그램에 저장하는 명령어
+>2> : 에러에 대한 결과를 저장
+```
+iwonhwaui-MacBook-Pro:why wanna$ ls -l > result.txt
+iwonhwaui-MacBook-Pro:why wanna$ cat result.txt
+total 176
+-rw-r--r--  1 wanna  staff  88025  6 30 23:47 linux.txt
+-rw-r--r--  1 wanna  staff      0  7  1 00:41 result.txt  
+
+iwonhwaui-MacBook-Pro:why wanna$ rm rename.txt
+rm: rename.txt: No such file or directory
+iwonhwaui-MacBook-Pro:why wanna$ rm rename.txt > result.txt
+rm: rename.txt: No such file or directory
+iwonhwaui-MacBook-Pro:why wanna$ rm rename.txt 2> error.log
+iwonhwaui-MacBook-Pro:why wanna$ cat error.log
+rm: rename.txt: No such file or directory
+```
+
+----------------
+### 순차적 실행
+*mkdir why;cd why : why 폴더 생성후 그 폴더로 이동 _세미콜론으로 구분_
+```
+iwonhwaui-MacBook-Pro:~ wanna$ mkdir why;cd why
+iwonhwaui-MacBook-Pro:why wanna$ pwd
+/Users/wanna/why
+```
