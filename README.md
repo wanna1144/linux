@@ -124,14 +124,14 @@ total 0
 *sudo : 임시 슈퍼 유저의 권한으로 활동하는 명령어.
 
 *nano : 파일 편집 명령어.
->^O : 파일 저장
->^X : 편집 종료
->^K : 잘라내기 _-nano는 복사 기능이 없어서 ^K와 ^U로 사용해야함-_
->^U : 붙여넣기
->(mac) esc+6 : mask set _-선택하려는 영역 뒤까지 선택하기-_
->^W : 검색 _-다음 검색어를 보려면 다시 ^W + enter-_
+>^O : 파일 저장  
+>^X : 편집 종료  
+>^K : 잘라내기 _-nano는 복사 기능이 없어서 ^K와 ^U로 사용해야함-_  
+>^U : 붙여넣기  
+>(mac) esc+6 : mask set _-선택하려는 영역 뒤까지 선택하기-_  
+>^W : 검색 _-다음 검색어를 보려면 다시 ^W + enter-_  
 
-*wget : url을 통해 파일 다운 _맥은 brew install wget 후 사용_
+*wget : url을 통해 파일 다운 _-맥은 brew install wget 후 사용-_
 >wget -O (파일 명) (다운로드 링크) : 적은 파일명으로 저장됨
 ```
 iwonhwaui-MacBook-Pro:~ wanna$ wget http://wanna.dothome.co.kr/img/pdf/syeki.pdf
@@ -200,7 +200,7 @@ iwonhwaui-MacBook-Pro:why wanna$ cat hello.html
 </html>
 ```
 
-*grep (찾을 단어) (파일명) : 찾을 단어가 포함된 행을 보여주는 명령어.
+*grep (찾을 단어) (파일명) : 찾을 단어가 포함된 행을 보여주는 명령어.  
 
 *pipe(|) : 파이프 앞의 결과 값을 가지고 프로그램을 연결하는 명령어.
 ```
