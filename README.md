@@ -104,6 +104,7 @@ iwonhwaui-MacBook-Pro:wanna wanna$ rm -r hello_linux/
 ```
 
 *--help : 명령어 뒤에 --help를 붙이면 명령의 사용설명서가 출력
+>맥에선 man 명령어 
 
 *cp : 파일 및 디렉토리 복사 명령어. cp 파일 위치 및 파일 이름 (한칸 띄고) 파일 목적지 파일 위치 및 파일 이름
 ```
@@ -125,10 +126,10 @@ total 0
 *nano : 파일 편집 명령어.
 >^O : 파일 저장
 >^X : 편집 종료
->^K : 잘라내기 _nano는 복사 기능이 없어서 ^K와 ^U로 사용해야함_
+>^K : 잘라내기 _-nano는 복사 기능이 없어서 ^K와 ^U로 사용해야함-_
 >^U : 붙여넣기
->(mac) esc+6 : mask set _선택하려는 영역 뒤까지 선택하기_
->^W : 검색 _다음 검색어를 보려면 다시 ^W + enter_
+>(mac) esc+6 : mask set _-선택하려는 영역 뒤까지 선택하기-_
+>^W : 검색 _-다음 검색어를 보려면 다시 ^W + enter-_
 
 *wget : url을 통해 파일 다운 _맥은 brew install wget 후 사용_
 >wget -O (파일 명) (다운로드 링크) : 적은 파일명으로 저장됨
@@ -239,7 +240,7 @@ rm: rename.txt: No such file or directory
 
 ----------------
 ### 순차적 실행
-*mkdir why;cd why : why 폴더 생성후 그 폴더로 이동 _세미콜론으로 구분_
+*mkdir why;cd why : why 폴더 생성후 그 폴더로 이동 _-세미콜론으로 구분-_
 ```
 iwonhwaui-MacBook-Pro:~ wanna$ mkdir why;cd why
 iwonhwaui-MacBook-Pro:why wanna$ pwd
