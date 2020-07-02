@@ -244,8 +244,8 @@ rm: rename.txt: No such file or directory
 
 *head : 문장의 10줄만 출력하는 명령어.
 >head -n1 : 한줄만 출력
-````
->head -n1 : 한줄만 출력iwonhwaui-MacBook-Pro:~ wanna$ head why/linux.txt 
+```
+iwonhwaui-MacBook-Pro:~ wanna$ head why/linux.txt 
 Linux
 From Wikipedia, the free encyclopedia
 Jump to navigationJump to search
