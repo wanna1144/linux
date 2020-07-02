@@ -190,7 +190,9 @@ drwxr-xr-x   4 wanna  staff      128  6 29 22:17 VirtualBox VMs
 -rw-r--r--   1 wanna  staff  8080675  5 22 16:03 pdfpdf.pdf
 ```
 
-*cat : cat (파일명) 을 하면 화면에 내용 출력
+*cat : 사용법이 다양한 명령어.
+>cat 만 친다면 사용자가 키보드로 입력하는 정보를 받음. _-나올때는 ^D-_
+>cat (파일명) : 화면에 내용 출력
 ```
 iwonhwaui-MacBook-Pro:why wanna$ cat hello.html
 <html>
@@ -221,7 +223,9 @@ iwonhwaui-MacBook-Pro:why wanna$ man ls | grep sort
 ```
 
 *output(>) : 앞의 프로그램을 실행한 결과값을 화면에 출력하는 대신에 뒤의 프로그램에 저장하는 명령어
->2> : 에러에 대한 결과를 저장
+> 2> : 에러에 대한 결과를 저장  
+> >> : 결과값을 덮어쓰기 말고 추가 저장되게 함  
+> > /dev/null : 유닉스 계열에서의 쓰레기통, 화면에서도 파일에서도 출력되지 않음  
 ```
 iwonhwaui-MacBook-Pro:why wanna$ ls -l > result.txt
 iwonhwaui-MacBook-Pro:why wanna$ cat result.txt
@@ -238,11 +242,69 @@ iwonhwaui-MacBook-Pro:why wanna$ cat error.log
 rm: rename.txt: No such file or directory
 ```
 
+*head : 문장의 10줄만 출력하는 명령어.
+>head -n1 : 한줄만 출력
+````
+>head -n1 : 한줄만 출력iwonhwaui-MacBook-Pro:~ wanna$ head why/linux.txt 
+Linux
+From Wikipedia, the free encyclopedia
+Jump to navigationJump to search
+This article is about the family of operating systems. For the kernel, see Linux kernel. For other uses, see Linux (disambiguation).
+Linux
+Tux the penguin
+Tux the penguin, mascot of Linux[1]
+Developer	Community
+Linus Torvalds
+Written in	C, Assembly language
+
+iwonhwaui-MacBook-Pro:~ wanna$ head -n1 why/linux.txt 
+Linux
+```
+>head -n1 : 한줄만 출력
+
+
 ----------------
 ### 순차적 실행
-*mkdir why;cd why : why 폴더 생성후 그 폴더로 이동 _-세미콜론으로 구분-_
+> *mkdir why;cd why : why 폴더 생성후 그 폴더로 이동 _-세미콜론으로 구분-_
 ```
 iwonhwaui-MacBook-Pro:~ wanna$ mkdir why;cd why
 iwonhwaui-MacBook-Pro:why wanna$ pwd
 /Users/wanna/why
+```
+-----------------
+### shell script : 한번에 명령어를 실행시키는 기능
+> *chmod +x (파일명) : 파일에 실행 기능을 추가하는 명령어
+```
+ GNU nano 2.0.6               File: backup                                      
+
+#!/bin/bash               _-작성된 backup이라는 프로그램을 bash로 해석되어야 함을 나타냄-_
+if ! [ -d bak ]; then     _-현재 디렉토리에 bak라는 디렉토리가 없다면-_
+        mkdir bak         _-bak라는 디렉토리를 생성-_
+fi                        _-조건문 종료-_
+cp *.log bak              _-현재 디렉토리의 .log로 끝나는 모든 파일을 bak로 복사-_
+
+
+                                  [ New File ]
+^G Get Help  ^O WriteOut  ^R Read File ^Y Prev Page ^K Cut Text  ^C Cur Pos
+^X Exit      ^J Justify   ^W Where Is  ^V Next Page ^U UnCut Text^T To Spell
+
+
+iwonhwaui-MacBook-Pro:script wanna$ ls -l
+total 8
+-rw-r--r--  1 wanna  staff    0  7  2 16:29 a.log
+-rw-r--r--  1 wanna  staff    0  7  2 16:29 b.log
+<u>-rw-r--r--  1 wanna  staff   61  7  2 16:39 backup</u><br>
+drwxr-xr-x  5 wanna  staff  160  7  2 16:30 bak
+-rw-r--r--  1 wanna  staff    0  7  2 16:29 c.log
+iwonhwaui-MacBook-Pro:script wanna$ ./backup
+-bash: ./backup: Permission denied
+iwonhwaui-MacBook-Pro:script wanna$ chmod +x backup
+iwonhwaui-MacBook-Pro:script wanna$ ls -l
+total 8
+-rw-r--r--  1 wanna  staff    0  7  2 16:29 a.log
+-rw-r--r--  1 wanna  staff    0  7  2 16:29 b.log
+<u>-rwxr-xr-x  1 wanna  staff   61  7  2 16:39 backup</u><br>
+drwxr-xr-x  5 wanna  staff  160  7  2 16:30 bak
+-rw-r--r--  1 wanna  staff    0  7  2 16:29 c.log
+iwonhwaui-MacBook-Pro:script wanna$ rm -rf bak
 ```
