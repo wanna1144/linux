@@ -276,11 +276,11 @@ iwonhwaui-MacBook-Pro:why wanna$ pwd
 ```
  GNU nano 2.0.6               File: backup                                      
 
-#!/bin/bash               _-작성된 backup이라는 프로그램을 bash로 해석되어야 함을 나타냄-_
-if ! [ -d bak ]; then     _-현재 디렉토리에 bak라는 디렉토리가 없다면-_
-        mkdir bak         _-bak라는 디렉토리를 생성-_
-fi                        _-조건문 종료-_
-cp *.log bak              _-현재 디렉토리의 .log로 끝나는 모든 파일을 bak로 복사-_
+#!/bin/bash               //작성된 backup이라는 프로그램을 bash로 해석되어야 함을 나타냄
+if ! [ -d bak ]; then     //현재 디렉토리에 bak라는 디렉토리가 없다면
+        mkdir bak         //bak라는 디렉토리를 생성
+fi                        //조건문 종료-_
+cp *.log bak              //현재 디렉토리의 .log로 끝나는 모든 파일을 bak로 복사
 
 
                                   [ New File ]
