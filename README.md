@@ -225,7 +225,7 @@ iwonhwaui-MacBook-Pro:why wanna$ man ls | grep sort
 *output(>) : 앞의 프로그램을 실행한 결과값을 화면에 출력하는 대신에 뒤의 프로그램에 저장하는 명령어
 > 2> : 에러에 대한 결과를 저장  
 >&nbsp;> : 결과값을 덮어쓰기 말고 추가 저장되게 함  
->&nbsp; /dev/null : 유닉스 계열에서의 쓰레기통, 화면에서도 파일에서도 출력되지 않음  
+>&nbsp;> /dev/null : 유닉스 계열에서의 쓰레기통, 화면에서도 파일에서도 출력되지 않음  
 ```
 iwonhwaui-MacBook-Pro:why wanna$ ls -l > result.txt
 iwonhwaui-MacBook-Pro:why wanna$ cat result.txt
