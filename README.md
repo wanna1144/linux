@@ -224,8 +224,8 @@ iwonhwaui-MacBook-Pro:why wanna$ man ls | grep sort
 
 *output(>) : 앞의 프로그램을 실행한 결과값을 화면에 출력하는 대신에 뒤의 프로그램에 저장하는 명령어
 > 2> : 에러에 대한 결과를 저장  
-> >> : 결과값을 덮어쓰기 말고 추가 저장되게 함  
-> > /dev/null : 유닉스 계열에서의 쓰레기통, 화면에서도 파일에서도 출력되지 않음  
+>&nbsp;> : 결과값을 덮어쓰기 말고 추가 저장되게 함  
+>&nbsp; /dev/null : 유닉스 계열에서의 쓰레기통, 화면에서도 파일에서도 출력되지 않음  
 ```
 iwonhwaui-MacBook-Pro:why wanna$ ls -l > result.txt
 iwonhwaui-MacBook-Pro:why wanna$ cat result.txt
@@ -293,7 +293,7 @@ iwonhwaui-MacBook-Pro:script wanna$ ls -l
 total 8
 -rw-r--r--  1 wanna  staff    0  7  2 16:29 a.log
 -rw-r--r--  1 wanna  staff    0  7  2 16:29 b.log
-<u>-rw-r--r--  1 wanna  staff   61  7  2 16:39 backup</u><br>
+-rw-r--r--  1 wanna  staff   61  7  2 16:39 backup
 drwxr-xr-x  5 wanna  staff  160  7  2 16:30 bak
 -rw-r--r--  1 wanna  staff    0  7  2 16:29 c.log
 iwonhwaui-MacBook-Pro:script wanna$ ./backup
@@ -303,7 +303,7 @@ iwonhwaui-MacBook-Pro:script wanna$ ls -l
 total 8
 -rw-r--r--  1 wanna  staff    0  7  2 16:29 a.log
 -rw-r--r--  1 wanna  staff    0  7  2 16:29 b.log
-<u>-rwxr-xr-x  1 wanna  staff   61  7  2 16:39 backup</u><br>
+-rwxr-xr-x  1 wanna  staff   61  7  2 16:39 backup<
 drwxr-xr-x  5 wanna  staff  160  7  2 16:30 bak
 -rw-r--r--  1 wanna  staff    0  7  2 16:29 c.log
 iwonhwaui-MacBook-Pro:script wanna$ rm -rf bak
