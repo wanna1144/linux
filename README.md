@@ -260,7 +260,6 @@ Written in	C, Assembly language
 iwonhwaui-MacBook-Pro:~ wanna$ head -n1 why/linux.txt 
 Linux
 ```
->head -n1 : 한줄만 출력
 
 ----------------
 ### 순차적 실행
@@ -270,7 +269,7 @@ iwonhwaui-MacBook-Pro:~ wanna$ mkdir why;cd why
 iwonhwaui-MacBook-Pro:why wanna$ pwd
 /Users/wanna/why
 ```
------------------
+
 ### shell script : 한번에 명령어를 실행시키는 기능
 > *chmod +x (파일명) : 파일에 실행 기능을 추가하는 명령어
 ```
