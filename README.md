@@ -261,6 +261,8 @@ iwonhwaui-MacBook-Pro:~ wanna$ head -n1 why/linux.txt
 Linux
 ```
 
+---------------------------------
+
 ### 순차적 실행
 > *mkdir why;cd why : why 폴더 생성후 그 폴더로 이동 _-세미콜론으로 구분-_
 ```
